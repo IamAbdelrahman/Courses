@@ -4,4 +4,4 @@
 
 ## Source 2 : HackerRank
 
-## Source 3 : C-for-Everyone (Coursera)
+## Source 3 : C-for-Everyone
