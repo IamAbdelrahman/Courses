@@ -5,7 +5,7 @@
 ## SUBDOMAINS
 - Introduction ✅
 - Conditionals and Loops ✅
-- Arrays and Strings
+- Arrays and Strings ✅
 - Functions
 - Structs and Enums
 
