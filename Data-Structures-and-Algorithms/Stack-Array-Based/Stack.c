@@ -37,8 +37,10 @@ void initializeStack(Stack *Ps) {
  *  This function is used to check the stack's capacity through
  *  checking the index of the entry whether it's equal to the
  *  MAX_STACK meaning that the stack is full or not
+ *  Pre-conditions: The stack exists
+ *  Post-conditions: It returns the state of the stack 1 or 0;
+ * 
  * @param Ps: It takes a pointer to struct stack
- *
  * @return It returns an integer 1 or 0
  */
 int StackFull (Stack *Ps) {
@@ -64,7 +66,7 @@ int StackFull (Stack *Ps) {
  *
  * @return It returns nothing
  */
-void push(STACKENTRY e, Stack *Ps) {
+void Push(STACKENTRY e, Stack *Ps) {
     Ps->entry[Ps->top++] = e;
 }
 /***********************************************************************************/
@@ -86,7 +88,7 @@ void push(STACKENTRY e, Stack *Ps) {
  *
  * @return It returns nothing
  */
-void pop (STACKENTRY *Pe, Stack *Ps) {
+void Pop (STACKENTRY *Pe, Stack *Ps) {
     *Pe = Ps->entry[--Ps->top];
 }
 /***********************************************************************************/
@@ -98,7 +100,8 @@ void pop (STACKENTRY *Pe, Stack *Ps) {
  *  or not, through accessing the struct's elements and
  *  see if the top's value is zero or not, if it's zero
  *  the function returns 1 and vice versa.
-
+ *  Pre-conditions: The stack exists
+ *  Post-conditions: It returns the state of the stack 1 or 0;
  * @param  Ps: It takes a pointer to struct stack. 
  *
  * @return It returns an integer 1 or 0.
@@ -169,22 +172,6 @@ int StackSize (Stack *Ps) {
  */
 void ClearStack (Stack *Ps) {
     Ps->top = 0;
-}
-/***********************************************************************************/
-
-/**
- * @brief  Displaying an element of the stack
- *  
- *  This function is used to print an element of the stack
- *  using the printf() function with a specifier that's known
- *  to only the user level who decides on the STACKENTRY.
-
- * @param  e: It takes an element of a data type of STACKENTRY.
- *
- * @return It returns nothing
- */
- void Display (STACKENTRY e) {
-    printf(" %d\n", e);
 }
 /***********************************************************************************/
 
