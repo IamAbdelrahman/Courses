@@ -26,24 +26,3 @@ __________________________________________________________________
 | Week 6 | Final Exam |
  __________________________________________________________________
  __________________________________________________________________
-# Embedded Systems
-### Instructor : Professor. Alex Fosdick
-### University of Colorado Boulder
-__________________________________________________________________
-## _Course 1: Introduction to Embedded Systems Software and Development Environments_
-| Week | Topic |
-| ----- | ------|
-| Week 1 | Embedded System Development Components |
-| Week 2 | Compilation with GCC and GNU Make |
-| Week 3 | Memory Types, Segments and Management |
-| Week 4 |  Final Assessment |
-__________________________________________________________________
-## _Course 2: Embedded Software and Hardware Architecture_
-| Week | Topic |
-| ----- | ------|
-| Week 1 |  Interfacing C-Programs with ARM Core Microcontrollers |
-| Week 2 | Manipulating Memory |
-| Week 3 | Designing Embedded Data Structures |
-__________________________________________________________________
-
-
