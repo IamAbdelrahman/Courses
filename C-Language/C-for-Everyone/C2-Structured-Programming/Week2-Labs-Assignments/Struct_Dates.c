@@ -1,3 +1,24 @@
+/*
+	Author: Abdelruhman Kamal
+	Program: Write enumerated types that supports dates such as december 12. 
+	Then add a function that produces a next day. 
+	So nextday(date) of december 12 is december 13. 
+	Also write a function printdate(date) that prints a date legiblyThe function can assume that February has 28 days and it most know 	how many days are in each month. 
+	Use a struct with two members; one is the month and the second is the depot the month—an int (or short). 
+*/
+/******************************************************************************
+ * Copyright (C) 2024 by Abdelrahman Kamal - C-For-Everyone
+ *****************************************************************************/
+/**
+ * @file Struct_Dates.c
+ * @program: 	Write enumerated types that supports dates such as december 12. 
+		Then add a function that produces a next day. 
+		Also write a function printdate(date) that prints a date legibly.
+ *
+ * @author Abdelrahman Kamal
+ * @date 01/01/2024
+ *
+ */
 #include <stdio.h>
 
 typedef enum month
@@ -19,12 +40,12 @@ typedef enum month
 typedef struct date
 {
     Month_t m;
-    int d;
+    short int d;
 } SDate_t;
 
 // This function prints the current date.
 
-void print_date(SDate_t date)
+void printdate(SDate_t date)
 {
 
     switch (date.m)
@@ -73,7 +94,7 @@ void print_date(SDate_t date)
 
 // This function takes a current date and prints the next date
 
-void nextdate(SDate_t date)
+void nextday(SDate_t date)
 {
     switch (date.m)
     {
@@ -196,8 +217,8 @@ int main(void)
     int i = 0;
     for (i = 0; i < 4; i++)
     {
-        print_date(date[i]);
-        nextdate(date[i]);
+        printdate(date[i]);
+        nextday(date[i]);
         printf("------------\n");
     }
 
