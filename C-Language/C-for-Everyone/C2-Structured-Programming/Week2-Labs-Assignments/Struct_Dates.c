@@ -192,11 +192,15 @@ void nextdate(SDate_t date)
 
 int main(void)
 {
-    SDate_t date = {DEC, 31}; // define a struct takes DEC into month(m) and 31 into day(d)
-
-    print_date(date); // print this date DEC 31
-
-    nextdate(date); // print the next date JAN 1
+    SDate_t date[4] = {{DEC, 31}, {FEB, 28}, {MAR, 14}, {OCT, 31}};
+    int i = 0;
+    for (i = 0; i < 4; i++)
+    {
+        print_date(date[i]);
+        nextdate(date[i]);
+        printf("------------\n");
+    }
 
     return 0;
 }
+
