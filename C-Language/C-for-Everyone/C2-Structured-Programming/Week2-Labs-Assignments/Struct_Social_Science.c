@@ -66,8 +66,8 @@ void generateSecurityNum(SEmployee_t *Ps)
 }
 
 void generateEmployees(SEmployee_t employee[])
-{   
-    void printEmployees(SEmployee_t*);
+{
+    void printEmployees(SEmployee_t *);
     int i = 0;
     for (i = 0; i < SIZE; i++)
     {
@@ -80,7 +80,7 @@ void generateEmployees(SEmployee_t employee[])
 }
 
 void printEmployees(SEmployee_t *Ps)
-{   
+{
     static int number = 0;
     switch (Ps->name)
     {
@@ -90,7 +90,6 @@ void printEmployees(SEmployee_t *Ps)
         printf("Salary: %d\t", Ps->salary);
         printf("Security Number: %d\n", Ps->security_number);
         break;
-
     case SALES:
         printf("Employee Number %d:\n", ++number);
         printf("Business department: %s\t", "Sales");
